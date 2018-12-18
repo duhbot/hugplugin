@@ -8,12 +8,12 @@ import org.pircbotx.hooks.events.*;
 
 import org.duh102.duhbot.functions.*;
 
-public class HugPlugin extends ListenerAdapter implements DuhbotFunction
+public class HugPlugin extends ListenerAdapter implements ListeningPlugin
 {
   static Pattern hugPattern = Pattern.compile("^hugs? .+");
-  public HashMap<String,String> getHelpFunctions()
+  public Map<String,String> getHelpFunctions()
   {
-    HashMap<String,String> helpFunctions = new HashMap<String,String>();
+    Map<String,String> helpFunctions = new HashMap<String,String>();
     helpFunctions.put("hugs", "Hugs you back whenever you hug the bot! (use /me hugs [botname])");
     return helpFunctions;
   }
